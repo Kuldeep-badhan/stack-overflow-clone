@@ -1,0 +1,30 @@
+.users-container-main {
+  margin: 2rem 2rem 0 14rem;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.users-container {
+  padding: 1rem;
+  > p {
+    margin: 1rem 0;
+  }
+  > .user {
+    display: flex;
+
+    > h2 {
+
+      margin-left: 1rem;
+      > a {
+        color: black;
+        transition: all 1s;
+        &:hover {
+            color: rgb(28, 27, 27);
+            border-bottom: 1px solid black;
+        }
+      }
+    }
+  }
+}

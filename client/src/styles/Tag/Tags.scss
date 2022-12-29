@@ -1,0 +1,25 @@
+.tags-container {
+  margin-left: 15rem;
+  >h1 {
+    margin: 1rem 0;
+  }
+
+  > .tags {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 1rem;
+    padding: 1rem 5rem 1rem 0;
+    > .tag {
+      > h5 {
+        background-color: #e1ecf4;
+        color: #39739d;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+      padding: 1rem;
+      border:  1px solid rgb(193, 193, 193);
+    }
+   
+  }
+}

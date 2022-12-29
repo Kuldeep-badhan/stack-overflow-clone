@@ -1,0 +1,22 @@
+
+@import './Utility/Loading.scss';
+@import './NavBar/Navbar.scss';
+@import './Home/Home.scss';
+@import './Auth/Auth.scss';
+@import './Bars/LeftSidebar.scss';
+@import './Bars/RightSidebar.scss';
+@import './Bars/Mainbar.scss';
+@import './Question/AskQuestion.scss';
+@import './Question/Question.scss';
+@import './Tag/Tags.scss';
+@import './User/Users.scss';
+@import './User/User.scss';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
