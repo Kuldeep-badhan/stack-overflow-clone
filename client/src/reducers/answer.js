@@ -52,7 +52,7 @@ const answerReducer = createSlice({
         console.log("pending deleteAnswer");
       })
       .addCase(deleteAnswer.fulfilled, (state, action) => {
-        console.log("fulfilled deleteAnswer", action.payload);
+        console.log("fulfilled deleteAnswer");
         // state.questionsList = action.payload;
       })
       .addCase(deleteAnswer.rejected, (state, action) => {
