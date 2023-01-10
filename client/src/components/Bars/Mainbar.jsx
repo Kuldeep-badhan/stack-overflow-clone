@@ -4,16 +4,18 @@ import {useSelector, useDispatch} from 'react-redux'
 import moment from 'moment'
 
 import { getAllQuestions } from "../../reducers/question.js";
+import { fetchUserData } from "../../reducers/auth.js";
 
 const Mainbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const questionsList = useSelector(state => state.question.questionsList);
-  const user = 1;
+  const user = useSelector(state => state.auth.userData);
   const dispatch = useDispatch();
   
   useEffect(()=>{
     dispatch(getAllQuestions());
+    dispatch(fetchUserData());
     setTimeout(()=>{
 
       console.log(questionsList, "I am mainbar");
