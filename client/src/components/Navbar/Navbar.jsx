@@ -1,46 +1,43 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
-import { useSelector, useDispatch  } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import decode from 'jwt-decode';
+import decode from "jwt-decode";
 
 import logo from "../../assets/logo.png";
 import Avatar from "../Utility/Avatar";
-import { logout, setUserNull, fetchUserData} from '../../reducers/auth.js'
+import { logout, setUserNull, fetchUserData } from "../../reducers/auth.js";
 
 const Navbar = () => {
   let user = useSelector((state) => {
     return state.auth.userData;
   });
- 
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  useEffect(()=>{
+  useEffect(() => {
     const userData = localStorage.getItem("profile");
-    if(userData === undefined){
+    if (userData === undefined) {
       console.log("user data not available");
-    }
-    else{
+    } else {
       dispatch(fetchUserData());
     }
     const token = user?.token;
-    if(token){
+    if (token) {
       const decodedToken = decode(token);
-      if((decodedToken.exp * 1000) < Date.now() ){
+      if (decodedToken.exp * 1000 < Date.now()) {
         console.log("logout");
         handleLogout();
       }
     }
-  },[dispatch])
+  }, [dispatch]);
 
-  function handleLogout(){
+  function handleLogout() {
     console.log("log out handler");
     dispatch(logout());
-    navigate("/");   
+    navigate("/");
     dispatch(setUserNull());
-    // dispatch(fetchUserData());
-
   }
 
   return (

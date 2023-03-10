@@ -14,8 +14,6 @@ import {
 } from "../../reducers/question.js";
 import { fetchUserData } from "../../reducers/auth.js";
 
-
-
 const Question = () => {
   const [loading, setLoading] = useState(true);
   const [answerBody, setAnswerBody] = useState("");
@@ -34,9 +32,7 @@ const Question = () => {
 
   const url = "http://localhost:3000";
 
-
   useEffect(() => {
-
     dispatch(getAllQuestions());
 
     dispatch(fetchUserData());
@@ -44,8 +40,7 @@ const Question = () => {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-
-  }, [noOfAnswers, dispatch]);
+  }, [noOfAnswers]);
 
   function submitHandler(e) {
     e.preventDefault();
@@ -133,9 +128,7 @@ const Question = () => {
                           >
                             delete
                           </button>
-                        ) : (
-                          null
-                        )}
+                        ) : null}
                       </div>
                     </div>
                     <div className="user-data-container">
@@ -182,9 +175,7 @@ const Question = () => {
                                 >
                                   delete
                                 </button>
-                              ) : (
-                                null
-                              )}
+                              ) : null}
                             </div>
                             <div className="user-data-container">
                               <div className="user-data">
@@ -218,7 +209,7 @@ const Question = () => {
                     </div>
                   ) : (
                     <div className="no-answer-container">
-                    <h2>No Answers Posted</h2>
+                      <h2>No Answers Posted</h2>
                     </div>
                   )}
 

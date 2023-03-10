@@ -9,7 +9,6 @@ const store = configureStore({
         answer: answerReducer,
         question: questionReducer,
         user: userReducer,
-
     }
 })
 

@@ -21,7 +21,7 @@
         padding: 0.4rem 0.8rem;
         margin-right: 1rem;
       }
-  }
+    }
   }
   > .user-details {
     > .tags {
@@ -29,56 +29,58 @@
         margin-top: 2rem;
       }
       > ul {
-        list-style: none;      }
+        list-style: none;
+      }
     }
   }
   > .edit-info-container {
-      > h2 {
-          margin: 1rem 0;
+    > h2 {
+      margin: 1rem 0;
+    }
+    > hr {
+      height: 1px;
+      background-color: #ccc;
+      border: none;
+    }
+    > form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      border: 1px solid gray;
+      padding: 0.5rem 1rem;
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        > label {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+        > input,
+        textarea {
+          padding: 0.3rem;
+        }
       }
-      > hr {
-          height: 1px;
-          background-color: #ccc;
+      > .user-btns {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        > button {
+          margin: 0.2rem 0.4rem 2rem 0;
+          padding: 10px 10px;
           border: none;
-      }
-      > form {
-          display: flex;
-          flex-direction: column;
-          gap: 2rem;
-          border: 1px solid gray;
-          padding: 0.5rem 1rem;
-          > div {
-              display: flex;
-              flex-direction: column;
-              gap: 0.5rem;
-              > label {
-                  font-size: 1.2rem;
-                  font-weight: bold;
-              }
-              > input,textarea {
-                padding: 0.3rem;
-              }
+          border-radius: 5px;
+          background-color: #009dff;
+          color: white;
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            background-color: #0086d8;
           }
-          > .user-btns {
-            display: flex;
-            justify-content: start;
-            flex-direction: row;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            > button {
-              margin: 0.2rem 0.4rem 2rem 0;
-              padding: 10px 10px;
-              border: none;
-              border-radius: 5px;
-              background-color: #009dff;
-              color: white;
-              cursor: pointer;
-              transition: all 0.3s;
-              &:hover {
-                background-color: #0086d8;
-              }
-            }
-          }
+        }
       }
+    }
   }
 }

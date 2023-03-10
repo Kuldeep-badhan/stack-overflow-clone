@@ -4,7 +4,7 @@ import API from "../api/axios.js";
 const initialState = {
   userData: null,
 };
-
+  
 export const LogIn = createAsyncThunk(
   "auth/LogIn",
   async (logInData, { rejectWithValue }) => {
