@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-
 const QuestionSchema = mongoose.Schema({
     questionTitle: {type:String, required:"Question must have a title"},
     questionBody: {type:String, required: "Question must have a body"},
